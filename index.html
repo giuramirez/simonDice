@@ -1,34 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <title>Simon dice</title>
-</head>
-<body>
-    <h1>Simón dice:</h1>
-    <section class="restart">
-        <button class="restart-game">
-            <span>Restart <br> game</span>
-        </button>
-    </section>
-    <section class="content">
-        <div class="grid-1">
-            <div class="item1"></div>
-        </div>
-        <div class="grid-2">
-            <div class="item2"></div>
-        </div>
-        <div class="grid-3">
-            <div class="item3"></div>
-        </div>
-        <div class="grid-4">
-            <div class="item4"></div>
-        </div>
-        <input type="checkbox" class="check-init" id="btn-init">
-        <label for="btn-init" class="btn-init">Clic para jugar!</label>
-    </section>
-<script src="index.js"></script>
-</body>
+    <title>Simon Dice</title>
+  </head>
+  <body>
+    <div class="gameboard">
+      <div id="celeste" class="color celeste left" data-color="celeste"></div>
+      <div id="violeta" class="color violeta right" data-color="violeta"></div>
+      <div id="naranja" class="color naranja left" data-color="naranja"></div>
+      <div id="verde" class="color verde right" data-color="verde"></div>
+      <!-- el evento onclick es el que llama a la funcion que contiene el constructor -->
+      <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
